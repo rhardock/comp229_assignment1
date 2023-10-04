@@ -7,7 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 const homeData = {
-  title: 'My Home',
+  title: 'home',
+  me: 'Ronald Hardock',
   mission: 'My mission is to provide the best services possible in the area of full stack web development.'
 };
 
