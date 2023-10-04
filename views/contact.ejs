@@ -6,21 +6,29 @@
   <main class="container">
 
   <h1><%= title %></h1>
-  <p>My name is <strong>Ronald Hardock</strong></p>
-  <p>
-  I am a <strong>Full Stack Developer</strong> from Toronto, Canada.</p>
-  <p>
-  I have a strong passion to always learn anything related to technology and math.</p>
+  <hr>
+  <p>My name is <strong><%= me %></strong></p>
+  <p>My phone number is <strong><%= phone %></strong></p>
 
-  <p>
-  I have worked for over 25 years with Autodesk developing the world's leading 3D modeling software
-  using C++, Python and Java.</p>
+  <a href="mailto:rhardock@my.centennialcollege.ca">
+  <p>Click here to email me</p>
+  </a>
 
-  <p>
-  I have Bachelor of Math and Masters of Math degrees from the University of Waterloo, Ontario, Canada
-  </p>
-        
-  <img src="/Assets/images/ronald.jpg" alt="Ronald Hardock" class="img-thumbnail rounded-circle" width="200" height="200">
+  <form action="/contact" method="POST">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea name="message" id="message" class="form-control" required></textarea>
+  </div>
+  <a href="/index"><button type="button" class="btn btn-primary">Send</button></a>
+</form>
 
   </main>
   
